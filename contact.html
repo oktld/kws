@@ -45,7 +45,7 @@
         </li>
         <li class="icon-box">
             <i class="fa fa-user"></i>
-            <a href="javascript:;">
+            <a href="about.html">
                 <h2>About</h2>
             </a>
         </li>
@@ -78,7 +78,7 @@
             <span></span>
             <ul class="list-unstyled" id="menu">
                 <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="javascript:;"><i class="fa fa-user"></i><span>About</span></a></li>
+                <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
                 <li><a href="javascript:;"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
                 <li class="active"><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                 <li><a href="javascript:;"><i class="fa fa-comments"></i><span>Blog</span></a></li>
@@ -114,11 +114,11 @@
 
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail us</span>contact@khalsawebsolutions.com
+                    <span class="d-block">mail us</span><a class="kws-link" href="mailto:contact@khalsawebsolutions.com">contact@khalsawebsolutions.com</a>
                 </p>
                 <p class="open-sans-font custom-span-contact position-relative mb-5">
                     <i class="fa fa-phone-square position-absolute"></i>
-                    <span class="d-block">call us</span>+91 94656 82970
+                    <span class="d-block">call us</span><a class="kws-link" href="tel:+919465682970">+91 94656 82970</a>
                 </p>
 
                 <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3 ">Business Hours</h3>
@@ -137,23 +137,23 @@
                     <li class="facebook"><a title="Facebook" href="https://www.facebook.com/khalsawebsolutions/" target="_blank"><i class="fa fa-facebook"></i></a>
                     </li>
 
-                    <li class="twitter" target="_blank"><a title="Twitter" href="https://twitter.com/KhalsaWeb"><i class="fa fa-twitter"></i></a>
+                    <li class="twitter"><a target="_blank" title="Twitter" href="https://twitter.com/KhalsaWeb"><i class="fa fa-twitter"></i></a>
                     </li>
 
                     <!--
-                    <li class="youtube" target="_blank"><a title="Youtube" href="#"><i class="fa fa-youtube"></i></a>
+                    <li class="youtube"><a title="Youtube" href="#" target="_blank"><i class="fa fa-youtube"></i></a>
                         </li>
                     -->
 
 
-                    <li class="youtube" target="_blank"><a title="Skype" href="https://join.skype.com/invite/kx3QjK0Si9U7"><i class="fa fa-skype"></i></a>
+                    <li class="youtube"><a target="_blank" title="Skype" href="https://join.skype.com/invite/kx3QjK0Si9U7"><i class="fa fa-skype"></i></a>
                     </li>
 
 
-                    <li class="youtube" target="_blank"><a title="Instagram" href="https://www.instagram.com/khalsawebsolutions/"><i class="fa fa-instagram"></i></a>
+                    <li class="youtube"><a target="_blank" title="Instagram" href="https://www.instagram.com/khalsawebsolutions/"><i class="fa fa-instagram"></i></a>
                     </li>
 
-                    <li class="dribbble" target="_blank"><a title="Linkedin" href="https://in.linkedin.com/company/khalsawebsolutions"><i class="fa fa-linkedin"></i></a>
+                    <li class="dribbble"><a target="_blank" title="Linkedin" href="https://in.linkedin.com/company/khalsawebsolutions"><i class="fa fa-linkedin"></i></a>
                     </li>
 
                 </ul>
@@ -163,8 +163,10 @@
             <div class="col-12 col-lg-8">
 
                 <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Have Question? Write a Message</h3>
-                
-                <form class="contactform" method="post" action="php/process-form.php">
+
+                <!-- <form class="contactform" method="post" action="php/process-form.php">-->
+
+                <form class="contactform" method="post" action="http://kws.hstn.me/send-message.php">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -178,6 +180,14 @@
                             </div>
                             <div class="col-12">
                                 <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="g-recaptcha" data-sitekey="6LfA38YaAAAAAESAfTqoZaTmtEZc4CsulTrekbIh"></div>
+                                <br />
+                            </div>
+
+                            <div class="col-12">
                                 <button type="submit" class="button">
                                     <span class="button-text">Send Message</span>
                                     <span class="button-icon fa fa-send"></span>
@@ -210,6 +220,7 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 </body>
 

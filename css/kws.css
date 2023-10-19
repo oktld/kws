@@ -6,6 +6,14 @@ color: #ffb400;
 */
 
 
+.kws-link {
+    text-decoration: none;
+    color: #fff;
+}
+.kws-link:hover {
+    text-decoration: underline;
+    color: #fff;
+}
 
 .kws-desktop-block1 {
     background-color: #fdc403 !important;

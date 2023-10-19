@@ -83,10 +83,20 @@
 
 			var form = $(this);
 			$.ajax({
-				url: form.attr("action"),
+				type: 'POST',
+				//url: form.attr("action"),
+
+				url: 'http://kws.hstn.me/send-message.php',
+
 				method: form.attr("method"),
 				data: form.serialize(),
+				cache:false,
+				//dataType : 'json',
+				crossDomain:true,
+
 				success: function(result) {
+					console.log('result');
+					console.log(result);
 					if (result == "success") {
 						$(".form-inputs").css("display", "none");
 						$(".box p").css("display", "none");
