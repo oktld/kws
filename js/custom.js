@@ -85,8 +85,8 @@
 			$.ajax({
 				type: 'POST',
 				//url: form.attr("action"),
-
-				url: 'http://kws.hstn.me/send-message.php',
+				//url: 'http://kws.hstn.me/send-message.php',
+				url: 'https://kws.great-site.net/send-message.php',
 
 				method: form.attr("method"),
 				data: form.serialize(),
