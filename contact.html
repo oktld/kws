@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact Us | Khalsa Web Solutions OPC Pvt Ltd</title>
+    <title>Contact Us | Khalsa Web Solutions (OPC) Private Limited</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -69,6 +69,7 @@
         </li>
     </ul>
     <!-- Fixed Navigation Ends -->
+
     <!-- Mobile Menu Starts -->
     <nav role="navigation" class="d-block d-lg-none">
         <div id="menuToggle">
@@ -114,12 +115,21 @@
 
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail us</span><a class="kws-link" href="mailto:contact@khalsawebsolutions.com">contact@khalsawebsolutions.com</a>
+                    <span class="d-block">mail us</span> <a class="kws-link" href="mailto:contact@khalsawebsolutions.com">contact@khalsawebsolutions.com</a>
                 </p>
-                <p class="open-sans-font custom-span-contact position-relative mb-5">
+
+                <p class="open-sans-font custom-span-contact position-relative mb-5x">
                     <i class="fa fa-phone-square position-absolute"></i>
-                    <span class="d-block">call us</span><a class="kws-link" href="tel:+919465682970">+91 94656 82970</a>
+                    <span class="d-block">call us</span> <a class="kws-link" href="tel:+919465682970">+91 94656 82970</a>
                 </p>
+
+
+                <p class="open-sans-font custom-span-contact position-relative mb-5">
+                    <i class="fa fa-map-marker position-absolute"></i>
+                    <span class="d-block">map</span> <a class="kws-link" href="https://maps.app.goo.gl/aFTu73BRRM9gv42W7" target="_blank">Find us on google map</a>
+                </p>
+
+
 
                 <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3 ">Business Hours</h3>
 
@@ -153,8 +163,10 @@
                     <li class="youtube"><a target="_blank" title="Instagram" href="https://www.instagram.com/khalsawebsolutions/"><i class="fa fa-instagram"></i></a>
                     </li>
 
+                    <!--
                     <li class="dribbble"><a target="_blank" title="Linkedin" href="https://in.linkedin.com/company/khalsawebsolutions"><i class="fa fa-linkedin"></i></a>
                     </li>
+                    -->
 
                 </ul>
             </div>
@@ -166,29 +178,29 @@
 
                 <!-- <form class="contactform" method="post" action="php/process-form.php">-->
 
-                <form class="contactform" method="post">
+                <form class="contactform" method="post" id="kws_contact_form">
                     <div class="contactform">
                         <div class="row">
-                            <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="YOUR NAME">
+                            <div class="col-12 col-md-6">
+                                <input type="text" name="name" placeholder="YOUR NAME" class="reset-me" required>
                             </div>
-                            <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                            <div class="col-12 col-md-6">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" class="reset-me" required>
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                                <input type="text" name="subject" placeholder="YOUR SUBJECT" class="reset-me" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" placeholder="YOUR MESSAGE" class="reset-me" required></textarea>
                             </div>
 
-                            <div class="col-12">
+                            <!--<div class="col-12">
                                 <div class="g-recaptcha" data-sitekey="6LfA38YaAAAAAESAfTqoZaTmtEZc4CsulTrekbIh"></div>
                                 <br />
-                            </div>
+                            </div>-->
 
                             <div class="col-12">
-                                <button type="submit" class="button">
+                                <button type="submit" class="button" name="send">
                                     <span class="button-text">Send Message</span>
                                     <span class="button-icon fa fa-send"></span>
                                 </button>
@@ -220,8 +232,9 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
+<!--
 <script src="https://www.google.com/recaptcha/api.js"></script>
-
+-->
 </body>
 
 </html>

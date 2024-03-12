@@ -78,7 +78,7 @@
 		/*  AJAX CONTACT FORM
         /* ----------------------------------------------------------- */
 
-		$(".contactform").on("submit", function() {
+		$(".contactformxx").on("submit", function() {
 			$(".output_message").text("Sending...");
 
 			var form = $(this);
@@ -131,5 +131,101 @@
 		}
 	});
 
+	$(document).ready(function() {
+
+	    //update this with your $form selector
+	    var form_id = "kws_contact_form";
+
+	    var data = {
+	        "access_token": "krzjn9el8f68vrjv8n6g0f28"
+	    };
+
+	    var sendButton = $("#" + form_id + " [name='send']");
+
+	    function onSuccess() {
+	        // remove this to avoid redirect
+	        //window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+
+	    	$("#" + form_id + " .button-text").text('Send Message');
+	    	sendButton.prop('disabled',false);
+
+	    	$(".reset-me").val('');
+
+			//$(".form-inputs").css("display", "none");
+			//$(".box p").css("display", "none");
+			$(".contactform").find(".output_message").removeClass("error");
+			$(".contactform").find(".output_message").addClass("success");
+			$(".output_message").text("Message Sent!");
+
+	    }
+
+	    function onError(error, err_message = "Error Sending!") {
+	        // remove this to avoid redirect
+	        //window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+
+	    	$("#" + form_id + " .button-text").text('Send Message');
+	    	sendButton.prop('disabled',false);
+
+			//$(".tabs-container").css("height", "440px");
+			$(".contactform").find(".output_message").removeClass("success");
+			$(".contactform").find(".output_message").addClass("error");
+			$(".output_message").text(err_message);
+	    }
+
+	    
+
+	    function sendEmail() {
+	        //sendButton.val('Sending…');
+	        $("#" + form_id + " .button-text").text('Sending…');
+	        sendButton.prop('disabled',true);
+
+	        var name = $("#" + form_id + " [name='name']").val();
+	        var email = $("#" + form_id + " [name='email']").val();
+	        var subject = $("#" + form_id + " [name='subject']").val();
+	        var message = $("#" + form_id + " [name='message']").val();
+	        
+	        //data['subject'] = subject;
+	        data['subject'] = "KWS Contact Us - "+name;
+	        data['text'] = "Message from contact us page :\n\n Name: "+name+"\nEmail: "+email+"\n Subject: "+subject+"\n Message: " + message;
+
+
+	        // validation
+	        var regex_email = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	        var regex_name = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+	        if (name=="" || email=="" || subject=="" || message=="" ) {
+
+	        	onError('error', "All fields are required.");
+	        	return false;
+
+	        } else if (regex_name.test(name) == false) {
+
+	        	onError('error', "Please enter your full name (first & last name).");
+	        	return false;
+
+	        } else if (regex_email.test(email) == false) {
+
+	        	onError('error', "Please enter valid email address.");
+	        	return false;
+
+	        } else {
+
+		        $.post('https://postmail.invotes.com/send',
+		            data,
+		            onSuccess
+		        ).fail(onError);
+	    	}
+
+	        return false;
+	    }
+
+	    sendButton.on('click', sendEmail);
+
+	    var $form = $("#" + form_id);
+	    $form.submit(function( event ) {
+	        event.preventDefault();
+	    });
+
+	});
 
 })(jQuery);
