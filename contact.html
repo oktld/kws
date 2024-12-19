@@ -137,7 +137,7 @@
 
                 <p class="open-sans-font custom-span-contact position-relative mb-5">
                     <i class="fa fa-ticket position-absolute"></i>
-                    <span class="d-block">Submit a Support Ticket</span> <a class="kws-link" href="https://kws.raiseaticket.com">kws.raiseaticket.com</a>
+                    <span class="d-block">Submit a Support Ticket</span> <a class="kws-link" href="https://kws.raiseaticket.com" target="_blank">kws.raiseaticket.com</a>
                 </p>
 
                 <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Business Hours</h3>
@@ -147,6 +147,56 @@
                     <span class="d-block">Mon - Fri</span>8:00 AM – 6:00 PM 
                 </p>
 
+
+            </div>
+            <!-- Left Side Ends -->
+            <!-- Contact Form Starts -->
+            <div class="col-12 col-lg-8">
+
+                <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Have Question? Write a Message</h3>
+
+                <!-- <form class="contactform" method="post" action="php/process-form.php">-->
+
+                <form class="contactform" method="post" id="kws_contact_form">
+                    <div class="contactform">
+                        <div class="row">
+
+                            <div class="col-12">
+                                <input type="text" name="name" placeholder="YOUR NAME" class="reset-me" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" class="reset-me" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" name="subject" placeholder="YOUR SUBJECT" class="reset-me" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" placeholder="YOUR MESSAGE" class="reset-me" required></textarea>
+                            </div>
+
+                            <!--<div class="col-12">
+                                <div class="g-recaptcha" data-sitekey="6LfA38YaAAAAAESAfTqoZaTmtEZc4CsulTrekbIh"></div>
+                                <br />
+                            </div>-->
+
+
+                            <div class="col-12X col-md-4">
+                                <button type="submit" class="button" name="send">
+                                    <span class="button-text">Send Message</span>
+                                    <span class="button-icon fa fa-send"></span>
+                                </button>
+                            </div>
+
+                            <div class="col-12X col-md-8 form-messageXX">
+                                <span class="output_message text-center font-weight-600 text-uppercase"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+
+                <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3 mt-5">Follow Us on</h3>
 
                 <ul class="social list-unstyled pt-1 mb-5">
 
@@ -178,54 +228,24 @@
                     -->
 
                 </ul>
-            </div>
-            <!-- Left Side Ends -->
-            <!-- Contact Form Starts -->
-            <div class="col-12 col-lg-8">
 
-                <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Have Question? Write a Message</h3>
-
-                <!-- <form class="contactform" method="post" action="php/process-form.php">-->
-
-                <form class="contactform" method="post" id="kws_contact_form">
-                    <div class="contactform">
-                        <div class="row">
-
-                            <div class="col-12 col-md-6">
-                                <input type="text" name="name" placeholder="YOUR NAME" class="reset-me" required>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <input type="email" name="email" placeholder="YOUR EMAIL" class="reset-me" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT" class="reset-me" required>
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE" class="reset-me" required></textarea>
-                            </div>
-
-                            <!--<div class="col-12">
-                                <div class="g-recaptcha" data-sitekey="6LfA38YaAAAAAESAfTqoZaTmtEZc4CsulTrekbIh"></div>
-                                <br />
-                            </div>-->
-
-
-                            <div class="col-12X col-md-4">
-                                <button type="submit" class="button" name="send">
-                                    <span class="button-text">Send Message</span>
-                                    <span class="button-icon fa fa-send"></span>
-                                </button>
-                            </div>
-
-                            <div class="col-12X col-md-8 form-messageXX">
-                                <span class="output_message text-center font-weight-600 text-uppercase"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
             </div>
             <!-- Contact Form Ends -->
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <footer>
+                  <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms & Conditions</a>
+                    <a href="">Sitemap</a>
+                  </div>
+                  <p>&copy; Copyright Khalsa Web Solutions 2025. All rights reserved.</p>
+                </footer>
+            </div>
         </div>
     </div>
 
