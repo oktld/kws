@@ -66,7 +66,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px; /* Spacing between links */
+  gap: 10px; /* Spacing between links */
   margin: 0;
   padding: 0;
 }
@@ -74,7 +74,7 @@ footer {
 .footer-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   padding: 10px 15px; /* Better touch targets */
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -89,7 +89,7 @@ footer {
 
 footer p {
     color: #555;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 10px;
 }
 
@@ -97,18 +97,22 @@ footer p {
 @media (max-width: 768px) {
   .footer-links {
     flex-direction: column; /* Stack links vertically */
-    gap: 10px;
+    gap: 5px;
   }
 
   .footer-links a {
-    font-size: 14px; /* Slightly larger for readability */
+    font-size: 12px; /* Slightly larger for readability */
     padding: 12px 20px;
   }
 }
 
 
-
-.footer-linksx a:hover {
-  color: #ffcc00;
+/* Content Styling */
+a.innerlink {
+  color: #fff;
   text-decoration: underline;
+}
+a.innerlink:hover {
+  text-decoration: none;
+  color: #ffcc00;
 }

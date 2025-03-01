@@ -172,8 +172,6 @@
 			$(".output_message").text(err_message);
 	    }
 
-	    
-
 	    function sendEmail() {
 	        //sendButton.val('Sending…');
 	        $("#" + form_id + " .button-text").text('Sending…');
