@@ -124,11 +124,17 @@
 
             <div class="col-6 col-lg-6 col-xl-6 mt-5 mt-lg-0 text-center">
 
-                <div className="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Q1RenFlqvV2SZV/view" data-text="Pay Now" data-color="#031CFC" data-size="large"></div>
+                <div className="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Q1RenFlqvV2SZV/view" data-text="Pay Now" data-color="#031CFC" data-size="large"><script>
+    (function(){
+    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
+    rzp && rzp.init && rzp.init()}})();
+</script></div>
 
 
                 <a class="button verify-certificate" href="https://rzp.io/rzp/Khalsa-Web-Solutions" target="_blank">
-                    <span class="button-text">Pay Now</span>
+                    <span class="button-text">Pay Online</span>
                     <span class="button-icon fa fa-arrow-right"></span>
                 </a>
 
@@ -138,12 +144,14 @@
 
 
 
-            <p class="open-sans-font text-center" align="justify">&nbsp;</p>
-            <p class="open-sans-font text-center" align="justify">&nbsp;</p>
-            <p class="open-sans-font text-center" align="justify">&nbsp;</p>
-            <p class="open-sans-font text-center" align="justify">&nbsp;</p>
-
         </div>
+
+
+
+        <p class="open-sans-font text-center" align="justify">&nbsp;</p>
+        <p class="open-sans-font text-center" align="justify">&nbsp;</p>
+        <p class="open-sans-font text-center" align="justify">&nbsp;</p>
+        <p class="open-sans-font text-center" align="justify">&nbsp;</p>
 
 
         <div class="row mt-5">
@@ -176,12 +184,5 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
-<script>
-    (function(){
-    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-    rzp && rzp.init && rzp.init()}})();
-</script>
 </body>
 </html>
