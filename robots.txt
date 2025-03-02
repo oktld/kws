@@ -1,0 +1,22 @@
+# robots.txt for Khalsa Web Solutions (OPC) Private Limited
+# Created on: 23 February 2025
+
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /private/
+
+# Allow all public pages to be crawled
+Allow: /
+
+# Sitemap Location
+Sitemap: https://khalsawebsolutions.com/sitemap.xml
+
+# Optional: Block some specific file types from being indexed (if needed)
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.zip$
+
+# Optional: Block internal search query strings (if any)
+Disallow: /*?search=
